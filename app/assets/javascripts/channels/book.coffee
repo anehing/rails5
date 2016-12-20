@@ -7,9 +7,9 @@ App.book = App.cable.subscriptions.create "BookChannel",
     alert 'disconnected'
     # Called when the subscription has been terminated by the server
 
-  received: ->
-    # $('#book').append data['message']
-    alert 'received'
+  received: (data)->
+    $('#book').append data['message']
+    #alert 'received'
     # Called when there's incoming data on the websocket for this channel
 
   publish: (message) ->
