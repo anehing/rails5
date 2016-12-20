@@ -2,7 +2,6 @@
 require 'pry'
 class BookChannel < ApplicationCable::Channel
   def subscribed
-    binding.pry
      stream_from "book_channel"
   end
 
